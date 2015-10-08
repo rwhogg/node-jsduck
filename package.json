@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "easejs": "^0.2.6",
-    "jquery": "^2.1.4",
+    "underscore": "^1.8.3",
     "which": "^1.2.0"
   }
 }
