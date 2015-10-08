@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 // Copyright © 2015 Bob W. Hogg. All Rights Reserved.
 //
 // This file is part of jsduck-from-js.
@@ -16,6 +14,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var jsduck = require("./jsduck.js")(["--version"]);
+var JSDuck = require("./jsduck.js");
+var jsduck = new JSDuck(["--version"]);
 console.log(jsduck.doc().output.toString());
 
+// test: generate documentation for jsduck-from-js itself
+jsduck = new JSDuck(["--out", "doc"]);
+jsduck.doc(["jsduck.js"]);

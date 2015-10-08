@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 // Copyright © 2015 Bob W. Hogg. All Rights Reserved.
 // 
 // This file is part of jsduck-from-js.
@@ -21,11 +19,32 @@ var which = require("which").sync;
 var childProcess = require("child_process");
 var _ = require("underscore");
 
+/**
+ * @class JSDuck
+ * JSDuck is a JavaScript wrapper for [jsduck](https://github.com/senchalabs/jsduck)
+ * It supports all the options the command-line version does
+ */
 module.exports = Class(
 {
+    /**
+     * @property {String[]} options
+     * Options for the jsduck gem
+     * @private
+     */
     "private options": {},
+
+    /**
+     * @property {String} binary
+     * Path to the jsduck gem
+     */
     "private binary": null,
     
+    /**
+     * Constructor
+     * @param {String[]} options Array of options to pass to the JSDuck gem
+     * @throws
+     * If we cannot find the jsduck binary
+     */
     "public __construct": function(options)
     {
         this.options = options;
@@ -34,6 +53,10 @@ module.exports = Class(
         this.binary = which("jsduck");
     },
     
+    /**
+     * doc generates the documentation according to the specified options
+     * @param {String[]} paths The list of paths to generate documentation for
+     */
     "public doc": function(paths)
     {
         var result = childProcess.spawnSync(this.binary, _.union(this.options, paths));
