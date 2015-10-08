@@ -36,8 +36,7 @@ module.exports = Class(
     
     "public doc": function(paths)
     {
-        var command = this.binary + " ";
-        var result = childProcess.spawnSync(command, _.union(this.options, paths));
+        var result = childProcess.spawnSync(this.binary, _.union(this.options, paths));
         if(result.error)
         {
             throw result.error;

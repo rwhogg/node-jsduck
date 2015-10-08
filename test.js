@@ -17,5 +17,5 @@
 // limitations under the License.
 
 var jsduck = require("./jsduck.js")(["--version"]);
-jsduck.doc();
+console.log(jsduck.doc().output.toString());
 
