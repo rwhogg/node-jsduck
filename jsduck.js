@@ -17,7 +17,6 @@
 // limitations under the License.
 
 var Class = require("easejs").Class;
-var module = require("module");
 var $ = require("jquery");
 var which = require("which").sync;
 var childProcess = require("child_process");
@@ -25,18 +24,19 @@ var childProcess = require("child_process");
 var JSDuck = Class(
 {
     "private options": {},
+    "private binary": null,
     
     "public __construct": function(options)
     {
         this.options = options;
         
         // confirm jsduck exists
-        
+        this.binary = which("jsduck");
     },
     
     "public doc": function(paths)
     {
-        var command = which("jsduck") + " ";
+        var command = this.binary + " ";
         var result = childProcess.spawnSync(command, $.merge(this.options, path));
         if(result.error)
         {
@@ -48,5 +48,6 @@ var JSDuck = Class(
 
 module.exports = function(options)
 {
-    jsduck: new JSDuck(options)
+    console.log("In function. options == " + options);
+    return new JSDuck(options);
 };
