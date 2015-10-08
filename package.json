@@ -1,0 +1,23 @@
+{
+  "name": "@rwhogg/jsduck-from-js",
+  "version": "0.0.0",
+  "description": "A JavaScript wrapper for jsduck",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/rwhogg/jsduck-from-js"
+  },
+  "keywords": [
+    "jsduck",
+    "documentation",
+    "wrapper"
+  ],
+  "author": "Bob W. Hogg",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "easejs": "^0.2.6"
+  }
+}
