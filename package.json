@@ -17,7 +17,9 @@
   ],
   "author": "Bob W. Hogg",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "easejs": "^0.2.6"
+  "dependencies": {
+    "easejs": "^0.2.6",
+    "jquery": "^2.1.4",
+    "which": "^1.2.0"
   }
 }
