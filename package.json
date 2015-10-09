@@ -1,5 +1,5 @@
 {
-  "name": "@rwhogg/jsduck-from-js",
+  "name": "jsduck-from-js",
   "version": "0.1.0",
   "description": "A JavaScript wrapper for jsduck",
   "main": "index.js",

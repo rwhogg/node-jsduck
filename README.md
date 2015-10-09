@@ -11,7 +11,7 @@ $ sudo gem install jsduck;
 
 Then add jsduck-from-js as a dependency:
 ```bash
-$ npm install @rwhogg/jsduck-from-js;
+$ npm install jsduck-from-js;
 ```
 
 ## License
