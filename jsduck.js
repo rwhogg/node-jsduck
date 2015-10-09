@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var Class = require("./Class.js");
+var Class = require("yajscf");
 var which = require("which").sync;
 var childProcess = require("child_process");
 var _ = require("underscore");

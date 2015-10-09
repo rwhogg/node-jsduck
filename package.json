@@ -2,7 +2,7 @@
   "name": "jsduck-from-js",
   "version": "0.1.0",
   "description": "A JavaScript wrapper for jsduck",
-  "main": "index.js",
+  "main": "jsduck.js",
   "scripts": {
     "test": "node test.js"
   },
@@ -19,6 +19,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "underscore": "^1.8.3",
-    "which": "^1.2.0"
+    "which": "^1.2.0",
+    "yajscf": "^1.0.0"
   }
 }
