@@ -16,10 +16,8 @@
     "wrapper"
   ],
   "author": "Bob W. Hogg",
-  "private": true,
   "license": "Apache-2.0",
   "dependencies": {
-    "easejs": "^0.2.6",
     "underscore": "^1.8.3",
     "which": "^1.2.0"
   }

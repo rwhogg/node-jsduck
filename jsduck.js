@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var Class = require("easejs").Class;
+var Class = require("./Class.js");
 var which = require("which").sync;
 var childProcess = require("child_process");
 var _ = require("underscore");
@@ -24,32 +24,29 @@ var _ = require("underscore");
  * JSDuck is a JavaScript wrapper for [jsduck](https://github.com/senchalabs/jsduck)
  * It supports all the options the command-line version does
  */
-module.exports = Class(
+module.exports = Class.extend(
 {
-    /**
-     * @property {String[]} options
-     * Options for the jsduck gem
-     * @private
-     */
-    "private options": {},
-
-    /**
-     * @property {String} binary
-     * Path to the jsduck gem
-     */
-    "private binary": null,
-    
     /**
      * Constructor
      * @param {String[]} options Array of options to pass to the JSDuck gem
      * @throws
      * If we cannot find the jsduck binary
      */
-    "public __construct": function(options)
+    init: function(options)
     {
+        /**
+         * @property {String[]} options
+         * Options for the jsduck gem
+         * @private
+         */
         this.options = options;
         
         // confirm jsduck exists
+        /**
+         * @property {String} binary
+         * Path to the jsduck gem
+         * @private
+         */
         this.binary = which("jsduck");
     },
     
@@ -57,7 +54,7 @@ module.exports = Class(
      * doc generates the documentation according to the specified options
      * @param {String[]} paths The list of paths to generate documentation for
      */
-    "public doc": function(paths)
+    doc: function(paths)
     {
         var result = childProcess.spawnSync(this.binary, _.union(this.options, paths));
         if(result.error)
