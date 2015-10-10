@@ -54,6 +54,8 @@ module.exports = Class.extend(
     /**
      * doc generates the documentation according to the specified options
      * @param {String[]} paths The list of paths to generate documentation for
+     * @return {Object}
+     * The result of the documentation request
      */
     doc: function(paths)
     {
