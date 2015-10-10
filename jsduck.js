@@ -27,7 +27,8 @@ var _ = require("underscore");
 module.exports = Class.extend(
 {
     /**
-     * Constructor
+     * @method constructor
+     * Constructor.
      * @param {String[]} options Array of options to pass to the JSDuck gem
      * @throws
      * If we cannot find the jsduck binary
