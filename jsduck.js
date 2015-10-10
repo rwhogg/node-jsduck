@@ -41,7 +41,7 @@ module.exports = Class.extend(
          * @private
          */
         this.options = options;
-        
+
         // confirm jsduck exists
         /**
          * @property {String} binary
@@ -50,7 +50,7 @@ module.exports = Class.extend(
          */
         this.binary = which("jsduck");
     },
-    
+
     /**
      * doc generates the documentation according to the specified options
      * @param {String[]} paths The list of paths to generate documentation for
