@@ -3,15 +3,9 @@
 jsduck-from-js is a Node.js-compatible wrapper for [jsduck](https://github.com/senchalabs/jsduck).
 
 ## Installing
-You'll need to install jsduck manually:
-
+Add jsduck-from-js as a dependency:
 ```bash
-$ sudo gem install jsduck;
-```
-
-Then add jsduck-from-js as a dependency:
-```bash
-$ npm install jsduck-from-js;
+$ npm install --save-dev jsduck-from-js;
 ```
 
 ## License
