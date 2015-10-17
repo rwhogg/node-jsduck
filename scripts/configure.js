@@ -28,6 +28,7 @@
 var path = require("path");
 var childProcess = require("child_process");
 var which = require("which").sync;
+var _ = require("underscore");
 
 console.log("Configuring JSDuck");
 
@@ -43,28 +44,55 @@ try
 }
 catch(e)
 {
-    console.log("Could not find jsduck");
+    console.log("Could not find jsduck. Attempting to install.");
     try
     {
         var gem = which("gem");
     }
     catch(f)
     {
-        console.log("Could not find gem executable");
+        console.log("Could not find gem executable.");
         console.log(INSTALL_JSDUCK_MESSAGE);
         process.exit(1);
     }
-    var gemProcess = childProcess.spawnSync(gem, ["install", GEM_NAME, "--user-install"]);
+    var argArray = ["install", GEM_NAME];
+    var gemProcess = childProcess.spawnSync(gem, argArray);
     if(gemProcess.error)
     {
         console.log("Installation process failed");
         console.log(INSTALL_JSDUCK_MESSAGE);
         throw gemProcess.error;
     }
+    else if(gemProcess.status == 1)
+    {
+        console.log("Installation failed with status " + gemProcess.status + ".");
+        console.log("Trying again with sudo.");
+        // try again with sudo
+        try
+        {
+            var sudo = which("sudo");
+        }
+        catch(g)
+        {
+            console.log("Could not find sudo.");
+            console.log(INSTALL_JSDUCK_MESSAGE);
+            process.exit(1);
+        }
+        argArray = _.union([gem], argArray);
+        gemProcess = childProcess.spawnSync(sudo, argArray);
+        if(gemProcess.error)
+        {
+            console.log("Could not install with sudo.");
+            console.log(INSTALL_JSDUCK_MESSAGE);
+            throw gemProcess.error;
+        }
+        else if(gemProcess.status != 0)
+        {
+            console.log("Sudo installation failed with status " + gemProcess.status);
+        }
+    }
     else
     {
-        console.log(gemProcess.status);
-        console.log(gemProcess.stdout.toString());
-        console.log(gemProcess.stderr.toString());
+        console.log("Installation failed with status " + gemProcess.status);
     }
 }
