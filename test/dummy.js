@@ -14,14 +14,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var JSDuck = require("./jsduck.js");
-var jsduck = new JSDuck(["--version"]);
-console.log(jsduck.doc().output.toString());
+// This is a dummy file that exists only for testing
 
-// test: generate documentation for jsduck-from-js itself
-jsduck = new JSDuck(["--out", "doc"]);
-jsduck.doc(["jsduck.js"]);
+/**
+ * @class Dummy
+ * This is a dummy class
+ */
+function Dummy(val)
+{
+    this.val = val;
+    return this;
+}
 
-// test: generate documentation for a dummy test file
-jsduck = new JSDuck(["--out", "tmp"]);
-jsduck.doc(["test/dummy.js"]);
+/**
+ * @method dummyVal
+ * Returns the dummy value
+ * @member Dummy
+ */
+function dummyVal()
+{
+    return this.val;
+}
