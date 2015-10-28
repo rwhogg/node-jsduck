@@ -1,5 +1,5 @@
 {
-  "name": "jsduck-from-js",
+  "name": "jsduck",
   "version": "0.1.3",
   "description": "A JavaScript wrapper for jsduck",
   "main": "jsduck.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/rwhogg/jsduck-from-js"
+    "url": "git@github.com/rwhogg/jsduck"
   },
   "keywords": [
     "jsduck",
@@ -26,3 +26,4 @@
     "yajscf": "^1.0.3"
   }
 }
+
