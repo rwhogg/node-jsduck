@@ -1,6 +1,6 @@
 // Copyright © 2015 Bob W. Hogg. All Rights Reserved.
 //
-// This file is part of jsduck-from-js.
+// This file is part of jsduck.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ var JSDuck = require("./jsduck.js");
 var jsduck = new JSDuck(["--version"]);
 console.log(jsduck.doc().output.toString());
 
-// test: generate documentation for jsduck-from-js itself
+// test: generate documentation for jsduck itself
 jsduck = new JSDuck(["--out", "doc"]);
 jsduck.doc(["jsduck.js"]);
 
