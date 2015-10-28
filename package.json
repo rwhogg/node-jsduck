@@ -1,6 +1,6 @@
 {
   "name": "jsduck",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A JavaScript wrapper for jsduck",
   "homepage": "https://github.com/rwhogg/jsduck",
   "bugs": "https://github.com/rwhogg/jsduck/issues",
