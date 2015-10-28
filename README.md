@@ -1,9 +1,11 @@
-# jsduck-from-js
+# jsduck
 
-jsduck-from-js is a Node.js-compatible wrapper for [jsduck](https://github.com/senchalabs/jsduck).
+This is a Node.js-compatible wrapper for [jsduck](https://github.com/senchalabs/jsduck).
+
+*NOTE* This package used to be called jsduck-from-js; the old name is deprecated, but this is a compatible upgrade.
 
 ## Installing
-Add jsduck-from-js as a dependency:
+Add jsduck as a dev (probably) dependency:
 
 ```bash
 $ npm install --save-dev jsduck;
