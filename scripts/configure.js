@@ -24,9 +24,10 @@
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
  limitations under the License.
- */
+*/
+ 
 var path = require("path");
-var childProcess = require("child_process");
+var spawnSync = require("spawn-sync");
 var which = require("which").sync;
 var _ = require("underscore");
 
@@ -56,7 +57,7 @@ catch(e)
         process.exit(1);
     }
     var argArray = ["install", GEM_NAME];
-    var gemProcess = childProcess.spawnSync(gem, argArray);
+    var gemProcess = spawnSync(gem, argArray);
     if(gemProcess.error)
     {
         console.log("Installation process failed");
@@ -79,7 +80,7 @@ catch(e)
             process.exit(1);
         }
         argArray = _.union([gem], argArray);
-        gemProcess = childProcess.spawnSync(sudo, argArray);
+        gemProcess = spawnSync(sudo, argArray);
         if(gemProcess.error)
         {
             console.log("Could not install with sudo.");
