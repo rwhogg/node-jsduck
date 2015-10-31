@@ -42,6 +42,7 @@ const GEM_NAME = "jsduck";
 try
 {
     var duck = which(GEM_NAME);
+    console.log("JSDuck already installed.");
 }
 catch(e)
 {
@@ -91,9 +92,17 @@ catch(e)
         {
             console.log("Sudo installation failed with status " + gemProcess.status);
         }
+        else
+        {
+            console.log("Sudo installation successful!");
+        }
+    }
+    else if(gemProcess.status)
+    {
+        console.log("Installation failed with status " + gemProcess.status);
     }
     else
     {
-        console.log("Installation failed with status " + gemProcess.status);
+        console.log("Installation successful");
     }
 }
