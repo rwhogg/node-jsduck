@@ -16,7 +16,7 @@
 
 var Class = require("yajscf");
 var which = require("which").sync;
-var childProcess = require("child_process");
+var spawnSync = require("spawn-sync");
 var _ = require("underscore");
 
 /**
@@ -59,7 +59,7 @@ module.exports = Class.extend(
      */
     doc: function(paths)
     {
-        var result = childProcess.spawnSync(this.binary, _.union(this.options, paths));
+        var result = spawnSync(this.binary, _.union(this.options, paths));
         if(result.error)
         {
             throw result.error;
