@@ -20,8 +20,18 @@ console.log(jsduck.doc().output.toString());
 
 // test: generate documentation for jsduck itself
 jsduck = new JSDuck(["--out", "doc"]);
-jsduck.doc(["jsduck.js"]);
+var result = jsduck.doc(["jsduck.js"]);
+if(result.status != 0)
+{
+    console.error("Generating JSDuck's own documentation failed.");
+    process.exit(result.status);
+}
 
 // test: generate documentation for a dummy test file
 jsduck = new JSDuck(["--out", "tmp"]);
-jsduck.doc(["test/dummy.js"]);
+result = jsduck.doc(["test/dummy.js"]);
+if(result.status != 0)
+{
+    console.error("Generating the dummy docs failed.");
+    process.exit(result.status);
+}
