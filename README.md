@@ -1,6 +1,6 @@
 # jsduck
 
-[![Build Status](https://travis-ci.org/rwhogg/jsduck.svg?branch=feature%2Ftravis)](https://travis-ci.org/rwhogg/jsduck)
+[![Build Status](https://travis-ci.org/rwhogg/jsduck.svg?branch=master)](https://travis-ci.org/rwhogg/jsduck)
 
 This is a Node.js-compatible wrapper for [jsduck](https://github.com/senchalabs/jsduck).
 
