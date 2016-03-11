@@ -7,6 +7,7 @@ This is a Node.js-compatible wrapper for [jsduck](https://github.com/senchalabs/
 *NOTE* This package used to be called jsduck-from-js; the old name is deprecated, but this is a compatible upgrade.
 
 ## Installing
+
 Add jsduck as a dev (probably) dependency:
 
 ```bash
@@ -22,13 +23,14 @@ jsduck.doc(["test/dummy.js"]);
 ```
 
 ## License
+
 Copyright © 2015 Bob W. Hogg. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
