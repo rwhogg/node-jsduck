@@ -22,9 +22,12 @@ jsduck = new JSDuck(["--out", "tmp"]);
 jsduck.doc(["test/dummy.js"]);
 ```
 
+In versions 0.2.1 and earlier, the `jsduck` gem is installed automatically. For security reasons, it no longer does
+this. Run `gem install jsduck` to install it.
+
 ## License
 
-Copyright © 2015 Bob W. Hogg. All Rights Reserved.
+Copyright © 2015 - 2016 Bob W. Hogg. All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,15 +1,12 @@
 {
   "name": "jsduck",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "A JavaScript wrapper for jsduck",
   "homepage": "https://github.com/rwhogg/jsduck",
   "bugs": "https://github.com/rwhogg/jsduck/issues",
   "main": "jsduck.js",
   "scripts": {
     "test": "node test.js",
-    "install": "npm run-script configure",
-    "update": "npm run-script configure",
-    "configure": "node scripts/configure.js",
     "prepublish": "npm run-script lint && npm test",
     "lint": "jscs jsduck.js"
   },
