@@ -1,4 +1,4 @@
-// Copyright © 2015 Bob W. Hogg. All Rights Reserved.
+// Copyright © 2015 - 2016 Bob W. Hogg. All rights reserved.
 //
 // This file is part of jsduck.
 //
