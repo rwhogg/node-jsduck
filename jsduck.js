@@ -30,10 +30,11 @@ module.exports = Class.extend(
      * @method constructor
      * Constructor.
      * @param {String[]} options Array of options to pass to the JSDuck gem
+     * @param {String} [path] Path to the jsduck executable. If not passed, uses `which` to find it.
      * @throws
      * If we cannot find the jsduck binary
      */
-    init: function(options)
+    init: function(options, path)
     {
         /**
          * @property {String[]} options
@@ -42,13 +43,20 @@ module.exports = Class.extend(
          */
         this.options = options;
 
-        // confirm jsduck exists
-        /**
-         * @property {String} binary
-         * Path to the jsduck gem
-         * @private
-         */
-        this.binary = which("jsduck");
+        if(path)
+        {
+            /**
+             * @property {String} binary
+             * Path to the jsduck gem
+             * @private
+             */
+            this.binary = path;
+        }
+        else
+        {
+            // confirm jsduck exists
+            this.binary = which("jsduck");
+        }
     },
 
     /**

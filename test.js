@@ -1,4 +1,4 @@
-// Copyright © 2015 Bob W. Hogg. All Rights Reserved.
+// Copyright © 2015 - 2016 Bob W. Hogg. All rights reserved.
 //
 // This file is part of jsduck.
 //
@@ -16,6 +16,7 @@
 
 var JSDuck = require("./jsduck.js");
 var jsduck = new JSDuck(["--version"]);
+var assert = require("assert");
 console.log(jsduck.doc().output.toString());
 
 // test: generate documentation for jsduck itself
@@ -35,3 +36,7 @@ if(result.status != 0)
     console.error("Generating the dummy docs failed.");
     process.exit(result.status);
 }
+
+// test: ensure a custom path works
+jsduck = new JSDuck(["--out", "top"], "/random/path/jsduck");
+assert(jsduck.binary == "/random/path/jsduck");
