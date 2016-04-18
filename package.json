@@ -1,6 +1,6 @@
 {
   "name": "jsduck",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A JavaScript wrapper for jsduck",
   "homepage": "https://github.com/rwhogg/jsduck",
   "bugs": "https://github.com/rwhogg/jsduck/issues",
@@ -28,6 +28,6 @@
     "yajscf": "^1.0.3"
   },
   "devDependencies": {
-    "jscs": "^2.5.1"
+    "jscs": "^3.0.3"
   }
 }
