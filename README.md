@@ -18,8 +18,15 @@ $ npm install --save-dev jsduck;
 
 ```js
 var JSDuck = require("jsduck");
-jsduck = new JSDuck(["--out", "tmp"]);
+var jsduck = new JSDuck(["--out", "tmp"]);
 jsduck.doc(["test/dummy.js"]);
+```
+
+You can also pass a custom path for the JSDuck executable:
+
+```js
+var jsduck = new JSDuck(["--out", "tmp"], "/path/to/jsduck");
+...
 ```
 
 In versions 0.2.1 and earlier, the `jsduck` gem is installed automatically. For security reasons, it no longer does
