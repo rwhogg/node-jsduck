@@ -28,6 +28,6 @@
     "yajscf": "^1.0.3"
   },
   "devDependencies": {
-    "jscs": "^3.0.3"
+    "jscs": "^3.0.7"
   }
 }
